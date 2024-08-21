@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('cloning repo) {
             steps {
-                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/yeswanthreddybellam/Jenkins.git']])
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/yeswanthreddybellam/Jenkins.git']])
                 }
             }
         stage('Validating PR') {
