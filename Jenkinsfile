@@ -6,7 +6,7 @@ pipeline {
     }
     
     stages {
-        stage('cloning repo) {
+        stage('cloning repo') {
             steps {
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/yeswanthreddybellam/Jenkins.git']])
                 }
