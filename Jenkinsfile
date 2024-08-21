@@ -20,13 +20,14 @@ pipeline {
                 }
 
             }
-            stage('view file '){
+        stage('view file '){
+            steps{
                 script {
                     // Switch to a specific branch
                     sh "cat Jenkinsfile"
                     } 
-
-            }    
+                }
+            }     
     }
     
 }
