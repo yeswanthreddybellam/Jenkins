@@ -1,30 +1,15 @@
-pipeline{
-    parameters { 
-        choice(name: 'CHOICE', choices: ['Stage', 'Prod', 'Dev'], description: 'select one')
+pipeline {
+    agent any
+    parameters {
+        string(name: 'PR-NUMBER', defaultValue: '124', description: 'Pass the PR number')
+
     }
-    agent any 
-    stages{
-        stage ('1st') 
-        {
+
+    stages {
+        stage('Validating PR') {
             steps {
-                echo "hellow bilvi"
+                echo "validating PR: ${PR-NUMBER}"
+                }
             }
-        }
-        stage ('2nd') 
-        {
-            steps {
-                echo "hellow maggi"
-            }
-        }
-        stage ('3rd'){
-        when {
-            expression {
-                "${params.CHOICE}" == 'Prod'
-            }
-        }
-        steps {
-                echo "hellow prod"
-            }
-        }
     }
 }
