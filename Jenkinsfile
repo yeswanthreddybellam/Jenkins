@@ -4,8 +4,13 @@ pipeline {
         string(name: 'PR', defaultValue: '124', description: 'Pass the PR number')
 
     }
-
+    
     stages {
+        stage('cloning repo) {
+            steps {
+                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/yeswanthreddybellam/Jenkins.git']])
+                }
+            }
         stage('Validating PR') {
             steps {
                 echo "validating PR: ${PR}"
