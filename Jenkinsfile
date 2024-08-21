@@ -24,7 +24,7 @@ pipeline {
             steps{
                 script {
                     // Switch to a specific branch
-                    sh "cat Jenkinsfile"
+                    sh "cat README.md"
                     } 
                 }
             }     
