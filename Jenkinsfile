@@ -11,5 +11,15 @@ pipeline {
                 echo "validating PR: ${PR}"
                 }
             }
+        stage('switching to PR') {
+            steps {
+                script {
+                    // Switch to a specific branch
+                    sh "git checkout ${PR}"
+                    } 
+                }
+
+            }    
     }
+    
 }
