@@ -1,4 +1,4 @@
 ## Datacenter
-- DC25 QACAND - []
-- DC25 QAAUTOCAND - []
+- DC25 QACAND - [Excluded]
+- DC25 QAAUTOCAND - [Excluded]
 
