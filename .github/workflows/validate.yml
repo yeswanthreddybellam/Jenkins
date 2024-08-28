@@ -6,23 +6,23 @@ on:
       - main
 
 jobs:
-  build:
+  first job:
     runs-on: ubuntu-latest
     env:
       TOKEN: "ola"
     steps:
-    - name: steps1
+    - name: checkout the branch
       uses: actions/checkout@v4
       with:
         path: ./download
-    - name: step2
+    - name: print the env variables
       run: env    
-    - name: step3 
+    - name: execute the commands below and print env variable and secrets
       run: |
         ls -lthr ./download
         echo "${{ secrets.VERSION }}"
         echo "${{ env.TOKEN }}"
-    - name: step4
+    - name: print hellow
       run: echo "hellow"
     - name: Python Syntax Checker
       uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
