@@ -6,18 +6,21 @@ on:
       - main
 
 jobs:
-  job1:
-    name: first job 
+  build:
     runs-on: ubuntu-latest
+    env:
+      TOKEN: "ola"
     steps:
     - name: steps 1
       uses: actions/checkout@v4
       with:
         path: ./download
+    - name: env variabels
+      run: env    
     - name: step3 
       run: |
         ls -lthr ./download
-        echo "${{ env.GITHUB_ACTION }}"
+        echo "${{ env.TOKEN }}"  
     - name: step 2
       run: echo "hellow"
     - name: Python Syntax Checker
