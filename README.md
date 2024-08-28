@@ -1,1 +1,1 @@
-[![Build Status](http://localhost:8080/buildStatus/icon?job=pipeline1)])
+# Build Status Badge (https://github.com/yeswanthreddybellam/Jenkins/workflows/validate/badge.svg)
