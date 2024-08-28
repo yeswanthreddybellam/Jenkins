@@ -1,5 +1,5 @@
 ## Datacenter
-- [included] dc25/qacand
+- [included] dc25/qacanda
 - [] dc25/qaautocand
 - [] dc25/qapatchpreview
 - [] dc41/stage
