@@ -14,4 +14,4 @@ jobs:
       shell: bash
       run: |
         echo "hellow"
-        echo "${{ secrets.VERSION }}"
+        echo ${{ secrets.VERSION }}
