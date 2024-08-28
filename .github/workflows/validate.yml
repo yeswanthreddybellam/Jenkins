@@ -1,18 +1,14 @@
-name: Run tests
+name: Pr validation
 
-on:
-  pull_request:
-    branches:
-      - main
+on: pull_request
 
-jobs:  
-  test:
+jobs:
+  job1:
+    name: first job 
     runs-on: ubuntu-latest
-
     steps:
-      - shell: bash
-        env:
-          SUPER_SECRET: ${{ secrets.VERSION }}
-        run: |
-          echo "$SUPER_SECRET"
-
+    - name: steps 1
+      uses: actions/checkout@v4
+    - name: step 2
+      run: echo "hellow"
+  
