@@ -20,7 +20,8 @@ jobs:
     - name: step3 
       run: |
         ls -lthr ./download
-        echo "${{ env.TOKEN }}"  
+        echo "${{ secrets.VERSION }}"
+        echo "${{ env.TOKEN }}"
     - name: step 2
       run: echo "hellow"
     - name: Python Syntax Checker
