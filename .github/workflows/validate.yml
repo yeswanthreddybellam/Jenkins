@@ -10,11 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - shell: bash
-      env:
-        SUPER_SECRET: ${{ secrets.VERSION }}
-    - name:
-      shell: bash
-      run: |
-        echo "hellow"
-        echo "$SUPER_SECRET"
+      - shell: bash
+        env:
+          SUPER_SECRET: ${{ secrets.VERSION }}
+        run: |
+          echo "$SUPER_SECRET"
+
