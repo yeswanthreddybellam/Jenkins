@@ -22,8 +22,8 @@ jobs:
         ls -lthr ./download
         echo "${{ secrets.VERSION }}"
         echo "${{ env.TOKEN }}"
-    - name: step 2
+    - name: step4
+      needs: [steps1,step2,step3]
       run: echo "hellow"
-        needs: [steps1,step2,step3]
     - name: Python Syntax Checker
       uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
