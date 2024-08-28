@@ -24,6 +24,6 @@ jobs:
         echo "${{ env.TOKEN }}"
     - name: step 2
       run: echo "hellow"
-      needs: [steps1,step2,step3]
+        needs: [steps1,step2,step3]
     - name: Python Syntax Checker
       uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
