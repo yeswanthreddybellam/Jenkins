@@ -15,7 +15,9 @@ jobs:
       with:
         path: ./download
     - name: step3 
-      run: ls -lthr ./download     
+      run: |
+        ls -lthr ./download
+        echo $GITHUB_ACTION
     - name: step 2
       run: echo "hellow"
     - name: Python Syntax Checker
