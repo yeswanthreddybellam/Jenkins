@@ -11,11 +11,11 @@ jobs:
     env:
       TOKEN: "ola"
     steps:
-    - name: steps 1
+    - name: steps1
       uses: actions/checkout@v4
       with:
         path: ./download
-    - name: env variabels
+    - name: step2
       run: env    
     - name: step3 
       run: |
@@ -24,5 +24,6 @@ jobs:
         echo "${{ env.TOKEN }}"
     - name: step 2
       run: echo "hellow"
+      needs: [steps1,step2,step3]
     - name: Python Syntax Checker
       uses: cclauss/Find-Python-syntax-errors-action@v0.2.0
