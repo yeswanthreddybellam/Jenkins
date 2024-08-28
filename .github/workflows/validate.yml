@@ -17,7 +17,7 @@ jobs:
     - name: step3 
       run: |
         ls -lthr ./download
-        echo ${{ env.GITHUB_ACTION }}
+        echo "${{ env.GITHUB_ACTION }}"
     - name: step 2
       run: echo "hellow"
     - name: Python Syntax Checker
