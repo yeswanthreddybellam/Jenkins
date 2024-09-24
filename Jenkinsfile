@@ -18,7 +18,7 @@ pipeline {
             }
         stage('view file '){
             steps{
-                echo "job name is: {JOB_DISPLAY_URL}"
+                echo "job name is: ${JOB_DISPLAY_URL}"
                 
                 }
             }     
