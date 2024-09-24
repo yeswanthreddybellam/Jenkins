@@ -1,1 +1,1 @@
-# Build Status Badge: ![](https://github.com/yeswanthreddybellam/Jenkins/workflows/Pr-validation/badge.svg)
+[![Build Status](http://localhost:8080/buildStatus/icon?job=GIT)](http://localhost:8080/job/GIT/)
