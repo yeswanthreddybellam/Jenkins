@@ -18,10 +18,8 @@ pipeline {
             }
         stage('view file '){
             steps{
-                script {
-                    // Switch to a specific branch
-                    sh "cat README.md"
-                    } 
+                echo "job name is: {JOB_DISPLAY_URL}"
+                
                 }
             }     
     }
