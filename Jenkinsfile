@@ -23,5 +23,11 @@ pipeline {
                 }
             }     
     }
+    post {
+        // Clean after build
+        always {
+            cleanWs(deleteDirs: true)
+        }
+    }
     
 }
